@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-luxury-beige: #F7F4F1;
+  --color-luxury-cream: #FCFAF8;
+  --color-luxury-dark: #141414;
+  --color-luxury-accent: #7A7672;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F4F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7A7672;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #141414;
+}
+
+/* Smooth scrolling via Lenis */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--color-luxury-beige);
+  color: var(--color-luxury-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Smooth typography and image zoom utility */
+.heading-reveal {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+/* Custom premium ambient glowing elements */
+.ambient-glow {
+  filter: blur(140px);
+  opacity: 0.15;
+  pointer-events: none;
+  background: radial-gradient(circle, #8E7C68 0%, rgba(245, 242, 235, 0) 70%);
+}
